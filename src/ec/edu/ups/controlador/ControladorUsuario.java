@@ -16,12 +16,12 @@ import java.util.List;
 public class ControladorUsuario extends ControladorAbstracto<Usuario> {
 
     private List<Usuario> listaUsuarios;
-    private List<List> listaCasados;
+//    private List<List> listaCasados;
     private static ControladorUsuario ctrlus;
 
     private ControladorUsuario() {
         listaUsuarios = new ArrayList<>();
-        listaCasados = new ArrayList<>();
+//        listaCasados = new ArrayList<>();
     }
     
     public static ControladorUsuario getInstance(){
@@ -39,17 +39,17 @@ public class ControladorUsuario extends ControladorAbstracto<Usuario> {
         return true;
     }
 
-    public boolean createCasados(Usuario objeto, Usuario objeto2, Usuario objeto3, Usuario objeto4) {
-//        if (listaCasados.contains(objeto)) {
-        List<Usuario> c = new ArrayList<>();
-        c.add(objeto);
-        c.add(objeto2);
-        c.add(objeto3);
-        c.add(objeto4);
-        return listaCasados.add(c);
-//        }
-//        return true;
-    }
+//    public boolean createCasados(Usuario objeto, Usuario objeto2, Usuario objeto3, Usuario objeto4) {
+////        if (listaCasados.contains(objeto)) {
+//        List<Usuario> c = new ArrayList<>();
+//        c.add(objeto);
+//        c.add(objeto2);
+//        c.add(objeto3);
+//        c.add(objeto4);
+//        return listaCasados.add(c);
+////        }
+////        return true;
+//    }
 
     @Override
     public Usuario readNombre(String objeto) {
@@ -95,7 +95,7 @@ public class ControladorUsuario extends ControladorAbstracto<Usuario> {
         return listaUsuarios;
     }
 
-    public List<List> findAll2() {
-        return listaCasados;
-    }
+//    public List<List> findAll2() {
+//        return listaCasados;
+//    }
 }
