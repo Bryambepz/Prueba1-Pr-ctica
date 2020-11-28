@@ -6,96 +6,142 @@
 package ec.edu.ups.modelo;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 /**
  *
  * @author braya
  */
-public class Usuario {
-    private int codigo;
-    private String cedula;
-    private String nombre;
-    private String apellido;
-    private String genero;
-    private Date fechaNac;
-    private String correo;
-    private String contraseña;
-        
-    public Usuario() {}
-
-    public Usuario(int codigo, String cedula, String nombre, String apellido, String correo, Date fechaNac, String contraseña, String genero) {
-        this.codigo = codigo;
-        this.cedula = cedula;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.correo = correo;
-        this.fechaNac = fechaNac;
-        this.contraseña = contraseña;
-        this.genero = genero;
+public  class Usuario{
+    private String Nombre;
+    private String Apellido;
+    private String Cedula;
+    private String Direccion;
+    private String Genero;
+    private Date FechaNac;
+    private String Correo;
+    private String Contraseña;
+    private String PapelEnBoda;
+    private String LugarBoda;
+    private Date FechaBoda;
+    
+    
+    
+    public Usuario() {
     }
 
-    public String getCedula() {
-        return cedula;
+    public Usuario(String Nombre, String Apellido, String Cedula, String Direccion, String Genero, Date FechaNac, String Correo, String Contraseña, String PapelEnBoda) {
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.Cedula = Cedula;
+        this.Direccion = Direccion;
+        this.Genero = Genero;
+        this.FechaNac = FechaNac;
+        this.Correo = Correo;
+        this.Contraseña = Contraseña;
+        this.PapelEnBoda = PapelEnBoda;
     }
 
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
+    public Usuario(String Nombre, String Apellido, String Cedula, String Direccion, String Genero, Date FechaNac, String Correo, String Contraseña, String LugarBoda, Date FechaBoda) {
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.Cedula = Cedula;
+        this.Direccion = Direccion;
+        this.Genero = Genero;
+        this.FechaNac = FechaNac;
+        this.Correo = Correo;
+        this.Contraseña = Contraseña;
+        this.LugarBoda = LugarBoda;
+        this.FechaBoda = FechaBoda;
     }
 
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
     }
 
     public String getApellido() {
-        return apellido;
+        return Apellido;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setApellido(String Apellido) {
+        this.Apellido = Apellido;
+    }
+
+    public String getCedula() {
+        return Cedula;
+    }
+
+    public void setCedula(String Cedula) {
+        this.Cedula = Cedula;
+    }
+
+    public String getDireccion() {
+        return Direccion;
+    }
+
+    public void setDireccion(String Direccion) {
+        this.Direccion = Direccion;
     }
 
     public String getGenero() {
-        return genero;
+        return Genero;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
+    public void setGenero(String Genero) {
+        this.Genero = Genero;
     }
 
     public Date getFechaNac() {
-        return fechaNac;
+        return FechaNac;
     }
 
-    public void setFechaNac(Date fechaNac) {
-        this.fechaNac = fechaNac;
+    public void setFechaNac(Date FechaNac) {
+        this.FechaNac = FechaNac;
     }
-
+    
     public String getCorreo() {
-        return correo;
+        return Correo;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setCorreo(String Correo) {
+        this.Correo = Correo;
     }
 
     public String getContraseña() {
-        return contraseña;
+        return Contraseña;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContraseña(String Contraseña) {
+        this.Contraseña = Contraseña;
+    }   
+
+    public String getLugarBoda() {
+        return LugarBoda;
+    }
+
+    public void setLugarBoda(String LugarBoda) {
+        this.LugarBoda = LugarBoda;
+    }
+
+    public Date getFechaBoda() {
+        return FechaBoda;
+    }
+
+    public void setFechaBoda(Date FechaBoda) {
+        this.FechaBoda = FechaBoda;
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 37 * hash + Objects.hashCode(this.cedula);
-        hash = 37 * hash + Objects.hashCode(this.correo);
+        int hash = 3;
+        hash = 71 * hash + Objects.hashCode(this.Cedula);
+        hash = 71 * hash + Objects.hashCode(this.Correo);
+        hash = 71 * hash + Objects.hashCode(this.Nombre);
         return hash;
     }
 
@@ -111,13 +157,22 @@ public class Usuario {
             return false;
         }
         final Usuario other = (Usuario) obj;
-        if (!Objects.equals(this.cedula, other.cedula)) {
+        if (!Objects.equals(this.Cedula, other.Cedula)) {
             return false;
         }
-        if (!Objects.equals(this.correo, other.correo)) {
+        if (!Objects.equals(this.Correo, other.Correo)) {
+            return false;
+        }
+        if (!Objects.equals(this.Nombre, other.Nombre)) {
             return false;
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "Nombre=" + Nombre + ", Apellido=" + Apellido + ", Cedula=" + Cedula + ", Direccion=" + Direccion + ", Genero=" + Genero + ", FechaNac=" + FechaNac + ", Correo=" + Correo + ", Contrase\u00f1a=" + Contraseña + ", PapelEnBoda=" + PapelEnBoda + ", LugarBoda=" + LugarBoda + ", FechaBoda=" + FechaBoda + '}';
+    }
+
     
 }
