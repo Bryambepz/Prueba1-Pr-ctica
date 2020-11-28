@@ -267,7 +267,7 @@ public class VentanaGestionar extends javax.swing.JInternalFrame {
 //        ctrlUsuario.readNombre(txtJuez.getText()).setLugarBoda(txtLCeremonia.getText());
 //        ctrlUsuario.readNombre(txtJuez.getText()).setFechaBoda(fechaB);
         
-        System.out.println(ctrlUsuario.findAll2());
+//        System.out.println(ctrlUsuario.findAll2());
     }//GEN-LAST:event_btncasarActionPerformed
 
     private void formInternalFrameActivated(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameActivated
